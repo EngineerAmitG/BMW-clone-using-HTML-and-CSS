@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW</title>
+    
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        nav img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;   
+        }
+       header video{
+            width: 100%;
+            height: 95vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        header{
+            width: 100%;
+        }        
+        
+       header nav {
+            width: 90%;
+            height: 95px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color:transparent;
+        }
+            header nav .nav1{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+       header nav .nav1 main {
+            display: flex;
+            gap: 20px;
+        }
+        header nav .nav1 h4, header nav .nav2 h4 {
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        header nav .nav2 {
+            display: flex;
+            gap: 20px;
+        }
+        header nav .nav1 img {
+            margin-right: 20px;
+        }
+        hr{
+            border: none;
+            height: 2px;
+            background-color: white;
+            margin: 0 auto;
+            width: 90%;
+        }
+        header .Header-main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        header .Header-main aside{
+            display: flex;
+            flex-direction: column;
+            bottom: 90%;
+            height: 40vh;
+            width: 90%;
+            color: white;
+            border: solid 7px transparent;
+        }
+        header .Header-main aside h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 5;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 50px;
+            
+        }
+
+        
+        header .Header-main aside button {
+            background-color: rgb(18, 126, 242);
+            color: rgb(255, 255, 255);
+            height: 65px;
+            width: 13vw;
+            cursor: pointer;
+            border: none;
+            font-weight:bold;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        header .Header-main aside button:hover {
+            background-color:rgb(4, 95, 192);;
+            color: rgb(251, 247, 247);
+        }
+        section {
+            margin: 150px 0 150px 0;
+            width: 100%;
+            height: 50vh;
+            background-color: rgb(251, 251, 251);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section article h1{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 20;
+            color: rgb(9, 9, 9);
+            margin-bottom: 20px;
+            font-size: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        section article main {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+        }
+        section article main .your-bmw {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        section article main .your-bmw img {
+            object-fit: cover;
+            border-radius: 10px;
+            position: relative;
+        }
+        section article main .your-bmw h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 20;
+            color: rgb(9, 9, 9);
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        section article main .your-bmw button {
+            background-color: rgb(251, 247, 247);
+            color: rgb(39, 39, 39);
+            height: 50px;
+            width: 15vw;
+            border: solid 1px rgb(19, 17, 17);
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight:bolder;
+            font-size: 16px;
+        }
+        section article main .your-bmw button:hover {
+           border: solid 3px rgb(19, 17, 17);
+        }
+
+      
+    .s2 {
+    position: relative;
+    background-image: url('./BMWimg/Bmw1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 68vh;
+    z-index: 0;
+}
+
+
+
+        section .section2,.text-box2,.text-box3{
+      position:absolute;
+      bottom: 15%;
+      left: 10%;
+      max-width: 600px;
+      z-index: 1;
+        }
+        @media (max-width: 768px) {
+    section .section2 {
+        bottom: 5%;
+        left: 3%;
+    }
+
+    section .section2 button {
+        width: 50vw;
+    }
+}
+        section .section2 h2,.text-box2 h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 20;
+            color: rgb(254, 251, 251);
+            margin-bottom: 20px;
+            font-size: 30px;
+            
+        }
+        section .section2 h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 40;
+            color: rgb(251, 248, 248);
+            margin-bottom: 10px;
+            font-size: 18px;
+            letter-spacing: 7px;
+        }
+        section .section2 button,.container button {
+            background-color:transparent;
+            color: rgb(255, 255, 255);
+            height: 65px;
+            width: 20vw;
+            cursor: pointer;
+            border: 2PX solid white;
+            font-weight:bold;
+            font-size: 15px;
+            border-radius: 5px;
+            display: block;  
+        }
+        section .section2 button:hover{
+            border: 3PX solid white;
+        }
+        .container button:hover {
+            border: 3PX solid white;
+        }
+
+
+  .container {
+      position: relative;
+      height: 68vh;
+      width: 100%;
+      background-image: url('./BMWimg/x3.webp');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding-left: 70px;   
+    }
+    
+    .text-box h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 20;
+      color: rgb(254, 251, 251);
+      margin-bottom: 10px;
+      font-size: 20px;
+      letter-spacing: 10px;
+    }
+    .text-box h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 20;
+      color: rgb(254, 251, 251);
+      margin-bottom: 10px;
+      font-size: 130px;
+    }
+    .text-box h3,.text-box3 h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 22;
+      color: rgb(254, 251, 251);
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+.con2{
+    margin-top: 130px;
+    background-image: url('./BMWimg/BMW4.webp');
+}
+.con3{
+     margin-top: 260px;
+     background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.7) 0%,
+      rgba(0,0,0,0.3) 0%,
+      rgba(0,0,0,0.7) 100%
+    ),
+    url('./BMWimg/iX.webp');
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.text-box3 h5{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 490;
+    color: rgb(254, 251, 251);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+
+
+
+section .bmw-offers-section{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(251, 251, 251);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.bmw-offers-section {
+    display: flex;
+    margin: 300px 9px 20px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    float: right;
+}
+.bmw-offers-section img {
+    padding: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 60vh;
+}
+
+.bmw-offers-section h2 {
+    font-family: 'Montserrat', sans-serif;
+      font-weight: 32;
+      color: rgb(12, 12, 12);
+      margin-bottom: 20px;
+      font-size: 30px;
+}
+
+.bmw-offers-section p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 32;
+      color: rgb(12, 12, 12);
+      margin-bottom: 20px;
+      font-size: 20px;
+}
+
+.know-more-link {
+        font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      color: rgb(12, 12, 12);
+      margin-bottom: 20px;
+      font-size: 16px;
+}
+
+.know-more-link:hover {
+    text-decoration: underline;
+}
+ .offer-content {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px; 
+}
+
+.bmw-footer {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    color: #111;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    margin: 15px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #0073e6;
+}
+
+footer .logoinfooter {
+    display: flex;
+    align-items:center;
+    align-content: center;
+    justify-content:space-evenly;
+    padding: 20px;
+    text-align: center;
+}
+footer .logoinfooter img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+} 
+footer .logoinfooter h6 {
+     font-family: 'Montserrat', sans-serif;
+      font-weight: 10;
+      color: rgb(12, 12, 12);
+      margin-bottom: 20px;
+      font-size: 16px;
+      text-align: center;
+}
+
+    </style>
+</head>
+<body>
+        <header>
+        <nav>
+            <div class="nav1">
+                <img src="./img/download.png" alt="logo">
+                <main>
+                    <h4>Models</h4>
+                    <h4>Electric</h4>
+                    <h4>Configurator</h4>
+                    <h4>Visit online Shop</h4>
+                    <h4>More BMW</h4>
+                </main>
+            </div>
+            <div class="nav2">
+              <h4><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg></h4>
+              <h4><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg></h4>
+              <h4><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg></h4>
+              <h4><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg></h4>  
+            </div>
+            </nav>
+            <hr>
+            <div class="Header-main">
+                <aside>
+                    <h1>BORING WILL BE BANISHED.</h1>
+                    <button>Skip Boring</button>
+                </aside>
+            </div>
+                <video src="./13127448_1920_1080_60fps.mp4" autoplay controls muted></video>
+    </header>
+    <section>
+        <article>
+            <h1>
+                Find your BMW
+            </h1>
+            <main>
+                <div class="your-bmw">
+                    <img src="./img/Car.png" alt="BMW Model 1">
+                    <h2>Find a new car.</h2>
+                    <button>Search now</button>
+                </div>
+                <div class="your-bmw">
+                       <img src="./img/Car2.png" alt="BMW Model 1" height="110px">
+                    <h2>Book a test drive.</h2>
+                    <button>Request a test drive</button>
+                </div>
+                <div class="your-bmw">
+                    <img src="./img/car3.png" alt="BMW Model 2" height="110px">
+                    <h2>Build your own.</h2>
+                    <button>Search now</button>
+                </div>
+            </main>
+        </article>
+    </section>
+    <section class="s2">
+        <div class="section2">
+            <h2>LUXURY. FAST. FORWARD. </h2>
+            <h4>THE BMW 7 RANGE </h4>
+            <button>Discover now</button>
+        </div>
+    </section>
+
+     <section>
+        <div class="container">
+    <div class="text-box">
+      <h4>THE ALL-NEW</h4>
+      <h1>X3</h1>
+      <h3>MASTER EVERY MOMENT.</h3>
+      <button>Discover now</button>
+    </div>
+  </div>
+    </section>
+
+    <section>
+           <div class="container con2">
+    <div class="text-box2">
+      <h3>THIS IS FORWARDISM: THE 7.</h3>
+      <button>Know more</button>
+    </div>
+  </div>
+    </section>
+
+    <section>
+        <div class="container con3">
+            <div class="text-box3">
+                <h3>THE iX: THE JOY OF ELECTRIC DRIVING.</h3>
+                <h5>100% electric. 100% driving pleasure. 100% BMW.</h5>
+                <h5>Experience an entirely new sensation of sheer driving pleasure.</h5>
+                <button>Know more</button>
+            </div>
+        </div>
+    </section>
+
+     <section>
+       <div class="bmw-offers-section">
+        <img src="./BMWimg/BMW6.jpeg" alt="Img">
+    <div class="offer-content">
+        
+        <h2>BMW Special Offers.</h2>
+        <p>Monthly EMI starting from Rs.34999*/Month. Check Out similar BMW finance offers available across the BMW range.</p>
+        <a href="#" class="know-more-link">Know more ></a>
+    </div>
+</div>
+    </section>
+
+
+     
+ <footer class="bmw-footer">
+     <div class="logoinfooter">
+            <img src="./img/download.png" alt="logo">
+            <h6>Stay up to date with the latest news from BMW</h6>
+            <a href="#" class="know-more-link">Sign up ></a>
+        </div>
+        <hr>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Contact & Info</h3>
+            <ul>
+                <li><a href="#">Customer support</a></li>
+                <li><a href="#">Online Genius (FAQ)</a></li>
+                <li><a href="#">Accident Support</a></li>
+                <li><a href="#">Request for Offer</a></li>
+                <li><a href="#">Find a Dealer</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Assistance & Services</h3>
+            <ul>
+                <li><a href="#">Book a Service Appointment</a></li>
+                <li><a href="#">MY BMW App</a></li>
+                <li><a href="#">Connected Drive</a></li>
+                <li><a href="#">Warranties</a></li>
+                <li><a href="#">Remote Software Upgrades</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Models</h3>
+            <ul>
+                <li><a href="#">BMW X series</a></li>
+                <li><a href="#">BMW 7 series</a></li>
+                <li><a href="#">BMW 5 series</a></li>
+                <li><a href="#">BMW 3 series</a></li>
+                <li><a href="#">BMW 2 series</a></li>
+                <li><a href="#">BMW M series</a></li>
+                <li><a href="#">BMW Concept Cars</a></li>
+                <li><a href="#">BMW Protection Vehicles</a></li>
+                <li><a href="#">GKL Cars</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Experience BMW</h3>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">BMW careers</a></li>
+                <li><a href="#">BMW.com</a></li>
+                <li><a href="#">BMW Group</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Choose & Buy</h3>
+            <ul>
+                <li><a href="#">Build your Own</a></li>
+                <li><a href="#">New Cars Search</a></li>
+                <li><a href="#">Pre-Book and Exclusive Editions</a></li>
+                <li><a href="#">BMW Financial Services</a></li>
+                <li><a href="#">Finance & Leasing</a></li>
+                <li><a href="#">BMW Offers</a></li>
+                <li><a href="#">Book a Test Drive</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>BMW Electric Cars</h3>
+            <ul>
+                <li><a href="#">BMW Electric Vehicles</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
